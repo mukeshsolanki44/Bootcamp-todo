@@ -1,4 +1,4 @@
-    import express from 'express'
+import express from 'express'
 import mongoose from './config/database'
 
 var db = mongoose.connection;
@@ -7,7 +7,11 @@ db.once('open', function() {
 console.log("succcesdful")
 });
 const app = express()
-app.listen(3003, ()=>{
+const PORT:any = process.env.PORT || 3003
+
+
+
+app.listen(PORT, ()=>{
     console.log("Chal ra ha")
 })
 app.get("/", (req: express.Request,res:express.Response)=>{

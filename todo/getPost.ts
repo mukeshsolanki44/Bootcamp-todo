@@ -35,8 +35,6 @@ rout.get('/get',(req:express.Request,res:express.Response)=>{
         })
 
 
-        
-        
         rout.delete("/delete",async(req:express.Request,res:express.Response)=>{
             UserSchma.findOneAndDelete({email: "mukeshsolanki.com"})
             .then(()=>{

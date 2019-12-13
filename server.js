@@ -11,7 +11,8 @@ db.once('open', function () {
     console.log("succcesdful");
 });
 var app = express_1.default();
-app.listen(3003, function () {
+var PORT = process.env.PORT || 3003;
+app.listen(PORT, function () {
     console.log("Chal ra ha");
 });
 app.get("/", function (req, res) {
